@@ -1,0 +1,42 @@
+{
+  "name": "hugo-node",
+  "version": "1.0.0",
+  "description": "A simple hugo test, combined with node",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint \"**/*.js\" --fix",
+    "check-lint": "lint [0-9]*.js",
+    "dev": "nodemon babel-node --presets @babel/preset-env ./server.js",
+    "test": "TEST_MODE=true npx mocha --require @babel/register --exit --timeout=10000",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.11.0",
+    "mongoose": "^8.8.4",
+    "profile-base": "github:secretstartups/profile-base"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.0",
+    "@babel/core": "^7.8.0",
+    "@babel/node": "^7.8.0",
+    "@babel/preset-env": "^7.8.2",
+    "@babel/register": "^7.8.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/chai": "^4.3.19",
+    "chai": "^4.3.0",
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^28.8.3",
+    "eslint-plugin-node": "^11.1.0",
+    "husky": "^8.0.0",
+    "mocha": "^10.7.3",
+    "nodemon": "^3.1.4",
+    "sinon": "^18.0.0",
+    "supertest": "^7.0.0"
+  }
+}
